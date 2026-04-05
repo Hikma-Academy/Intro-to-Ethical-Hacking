@@ -13,8 +13,9 @@ Imagine your computer is an apartment building. The hypervisor is the building m
 - Examples: VMware ESXi, Microsoft Hyper-V, Xen
 - Used in: Data centers, enterprise environments
 
-**Type 2 (Hosted)**: Runs on top of an existing operating system
+**Type 2 (Hosted)**: Runs on top of an existing operating system 
 - Examples: VMware Fusion (what you're using), VirtualBox, Parallels
+- URL : https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion 
 - Used in: Personal computers, development, testing
 
 ### What You're Using:
@@ -334,7 +335,7 @@ Kali includes massive wordlists for password testing:
 
 ---
 
-## Quick Reference - Most Common Tools
+## Quick Reference - Most Common Tools - [ONLY use it against ALLOWED TESTING APP]
 
 ### For Beginners Start Here:
 
