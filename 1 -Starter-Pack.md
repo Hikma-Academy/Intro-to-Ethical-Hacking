@@ -287,25 +287,6 @@ You should see `kali`. If you do, your terminal is working and you are ready.
 
 ---
 
-## Part 7: Update Kali Linux
-
-> **Run these commands every time you set up a fresh Kali install.** They make sure your system has the latest security patches and software.
-
-Open a terminal and run each command below. Copy and paste them one at a time.
-
-### Step 1 — Update package lists and upgrade all packages
-
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-
-> **What does this do?**
-> - `sudo` = run as admin
-> - `apt update` = download the latest list of available software
-> - `apt upgrade -y` = install all available updates (`-y` means "yes to all prompts")
-
-When prompted for a password, type `kali` (or your new password if you changed it). You will **not** see the characters as you type — this is normal.
-
 Troubleshooting: Mouse is not working 
 
 1 - Open your terminal and create a new configuration file:
@@ -328,6 +309,26 @@ Broadcom Community
 If it doesn't work then, open the terminal and run:
 sudo apt update && sudo apt install --reinstall open-vm-tools-desktop
 Reboot to apply the changes. 
+
+
+## Part 7: Update Kali Linux
+
+> **Run these commands every time you set up a fresh Kali install.** They make sure your system has the latest security patches and software.
+
+Open a terminal and run each command below. Copy and paste them one at a time.
+
+### Step 1 — Update package lists and upgrade all packages
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+> **What does this do?**
+> - `sudo` = run as admin
+> - `apt update` = download the latest list of available software
+> - `apt upgrade -y` = install all available updates (`-y` means "yes to all prompts")
+
+When prompted for a password, type `kali` (or your new password if you changed it). You will **not** see the characters as you type — this is normal.
 
 ### Step 2 — Full distribution upgrade
 
