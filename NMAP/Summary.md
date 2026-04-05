@@ -38,12 +38,8 @@ Professional tools - Industry-standard nmap
 Career pathways - Shows cybersecurity jobs
 
 🧃 Why Juice Shop is Perfect:
-Unlike DVWA, Juice Shop:
-
-More modern (Node.js vs PHP)
 Gamified learning (challenges built-in)
-Better maintained
 Realistic e-commerce scenario
 Professional UI
 
-Students will discover real vulnerabilities like SQL injection, CSRF, and exposed APIs - all safely!
+You will discover real vulnerabilities like SQL injection, CSRF, and exposed APIs - all safely!
