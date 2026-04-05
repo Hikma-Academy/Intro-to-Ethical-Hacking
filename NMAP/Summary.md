@@ -3,19 +3,19 @@
 🎯 The 4 Essential Commands for Students:
 
 # Command 1: Basic Port Scan - "Is anyone home?"
-bashnmap -p 3000 localhost
+nmap -p 3000 localhost
 Teaches: Understanding ports and network accessibility
 
 # Command 2: Service Detection - "Who's there?"
-bashnmap -sV -p 3000 localhost
+nmap -sV -p 3000 localhost
 Teaches: Identifying software and versions
 
 # Command 3: Aggressive Scan - "Tell me everything!"
-bashnmap -A -p 3000 localhost
+nmap -A -p 3000 localhost
 Teaches: Comprehensive reconnaissance techniques
 
 # Command 4: Vulnerability Scan - "Where are the weaknesses?"
-bashnmap --script vuln -p 3000 localhost
+nmap --script vuln -p 3000 localhost
 
 # Teaches: Security assessment and risk identification
 📚 What Makes This Guide Perfect for Beginners:
