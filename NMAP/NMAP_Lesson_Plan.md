@@ -1,4 +1,4 @@
-# NMAP Network Scanning - Student Guide - READ THIS
+# NMAP Network Scanning - Guide 
 ## Learn Security Testing with OWASP Juice Shop
 
 ---
