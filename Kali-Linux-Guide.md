@@ -1,27 +1,4 @@
-# Hypervisor and Kali Linux Complete Guide
-
-## Hypervisor - Simple Definition
-
-**Hypervisor** is software that allows you to run multiple operating systems on one physical computer at the same time. Think of it as a "computer inside your computer."
-
-### Simple Analogy:
-Imagine your computer is an apartment building. The hypervisor is the building manager that divides the building into separate apartments (virtual machines). Each apartment has its own space, utilities, and residents (operating systems), but they all share the same physical building (your computer's hardware).
-
-### Two Types:
-
-**Type 1 (Bare Metal)**: Runs directly on hardware
-- Examples: VMware ESXi, Microsoft Hyper-V, Xen
-- Used in: Data centers, enterprise environments
-
-**Type 2 (Hosted)**: Runs on top of an existing operating system 
-- Examples: VMware Fusion (what you're using), VirtualBox, Parallels
-- URL : https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion 
-- Used in: Personal computers, development, testing
-
-### What You're Using:
-**VMware Fusion Player** is a Type 2 hypervisor. It runs on your Mac (host OS) and lets you run Kali Linux (guest OS) in a virtual machine without affecting your Mac.
-
----
+#Kali Linux Complete Guide
 
 ## Kali Linux - Definition and Capabilities
 
