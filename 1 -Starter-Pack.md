@@ -211,8 +211,8 @@ Click **Apply** or close the settings window.
 1. Click the green **▶ Play** button to start the Kali VM.
 2. Wait for Kali to boot — you will see a login screen.
 3. Enter the default credentials:
-   - **Username:** `xxxx`
-   - **Password:** `xxxx`
+   - **Username:** `kali`
+   - **Password:** `kali`
 4. Press **Enter** to log in.
 
 > ⚠️ **Change your password immediately** by opening a terminal (see next section) and running:
@@ -305,6 +305,29 @@ sudo apt update && sudo apt upgrade -y
 > - `apt upgrade -y` = install all available updates (`-y` means "yes to all prompts")
 
 When prompted for a password, type `kali` (or your new password if you changed it). You will **not** see the characters as you type — this is normal.
+
+Troubleshooting: Mouse is not working 
+
+1 - Open your terminal and create a new configuration file:
+> - `sudo nano /etc/X11/xorg.conf.d/20-cursor.conf`
+
+2. Paste the following text into the file:
+   `Section "Device"
+    Identifier "Card0"
+    Driver "modesetting"
+    Option "SWCursor" "true"
+EndSection`
+
+Press Ctrl + O then Enter to save, and Ctrl + X to exit.
+Reboot your VM: 
+> - `sudo reboot`
+3. Reinstall VMware Tools 
+Sometimes the open-vm-tools-desktop package responsible for mouse integration becomes corrupted during an update. 
+Broadcom Community
+
+If it doesn't work then, open the terminal and run:
+sudo apt update && sudo apt install --reinstall open-vm-tools-desktop
+Reboot to apply the changes. 
 
 ### Step 2 — Full distribution upgrade
 
