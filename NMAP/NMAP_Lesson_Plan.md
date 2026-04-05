@@ -101,31 +101,7 @@ sudo docker ps
 
 **Access Juice Shop:** Open browser → `http://localhost:3000`
 
-### Option 2: Running Locally (Alternative)
 
-```bash
-# Install Node.js
-sudo apt install nodejs npm -y
-
-# Clone Juice Shop
-git clone https://github.com/juice-shop/juice-shop.git
-cd juice-shop
-
-# Install and run
-npm install
-npm start
-```
-
-### Verify Installation
-
-Open your web browser and visit:
-```
-http://localhost:3000
-```
-
-You should see a colorful juice store website! 🧃
-
----
 
 ## 🎯 Today's 4 Essential NMAP Commands
 
