@@ -86,6 +86,7 @@ By using these materials, you agree to **indemnify, defend, and hold harmless** 
   - OWASP Juice Shop (http://localhost:3000)
   - DVWA (http://localhost)
   - OWASP WebGoat
+  - eVoting 
 - Authorized CTF platforms (HackTheBox, TryHackMe - follow their terms)
 - All of this IN ISOLATED NETWORKS 
 
