@@ -303,10 +303,10 @@ sudo apt install -y docker.io
 ### Step 2 — Start the Docker service
 
 ```bash
-sudo systemctl enable docker --now
+sudo systemctl enable docker 
 ```
 
-> `enable` makes Docker start automatically every time Kali boots. `--now` starts it immediately.
+> `enable` makes Docker start automatically every time Kali boots. Add `--now` at the command above. 
 
 ### Step 3 — Allow your user to run Docker without sudo (optional but recommended)
 
