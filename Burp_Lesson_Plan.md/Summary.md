@@ -1,4 +1,4 @@
-# 🎯 The 4 Web Exploitation Concepts for Students - READ THIS
+# 🎯 The 4 Web Exploitation Concepts
 
 # Concept 1: HTTP Request Interception
 
@@ -46,7 +46,6 @@ Concept 1: HTTP Interception (15 min)
 Concept 2: Price Manipulation (20 min)
 Concept 3: Cookie Manipulation (20 min)
 Concept 4: SQL Injection (20 min)
-Lab Report & Discussion (20 min)
 
 # 🧃 Why Juice Shop is Perfect:
 
@@ -75,5 +74,3 @@ Educational context emphasized
 Responsible disclosure explained
 Career pathways highlighted
 Code of ethics included
-
-The guides are ready to use in class tomorrow! Students will learn real security concepts while developing critical thinking about web application security. 🚀
