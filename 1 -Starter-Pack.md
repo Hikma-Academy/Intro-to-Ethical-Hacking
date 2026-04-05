@@ -1,6 +1,6 @@
-# 🛡️ Kali Linux & OWASP Juice Shop — Install Guide
+# 🛡️ Kali Linux & OWASP Juice Shop — Happy Hacking!(^_^)!
 
-> **Audience:** First-time security learners who have never used a terminal.
+> **Audience:** First-time security learners. 
 >
 > **Goal:** Install VMware → import Kali Linux → launch OWASP Juice Shop inside Kali → start hacking (legally).
 >
@@ -13,22 +13,64 @@
 
 ## Table of Contents
 
-1. [Machine Requirements](#part-1-machine-requirements)
-2. [Download & Install VMware](#part-2-download--install-vmware)
-3. [Download & Import the Kali Linux VM](#part-3-download--import-the-kali-linux-vm)
-4. [Start Kali Linux & Open the Terminal](#part-4-start-kali-linux--open-the-terminal)
-5. [Update Kali Linux](#part-5-update-kali-linux)
-6. [Install Docker Inside Kali](#part-6-install-docker-inside-kali)
-7. [Install & Run OWASP Juice Shop](#part-7-install--run-owasp-juice-shop)
-8. [Managing Juice Shop](#part-8-managing-juice-shop)
-9. [Troubleshooting](#part-9-troubleshooting)
-10. [Quick Reference Cheat Sheet](#quick-reference-cheat-sheet)
+1. [What Is a Hypervisor?](#part-1-what-is-a-hypervisor)
+2. [What Is Kali Linux?](#part-2-what-is-kali-linux)
+3. [Machine Requirements](#part-3-machine-requirements)
+4. [Download & Install VMware](#part-4-download--install-vmware)
+5. [Download & Import the Kali Linux VM](#part-5-download--import-the-kali-linux-vm)
+6. [Start Kali Linux & Open the Terminal](#part-6-start-kali-linux--open-the-terminal)
+7. [Update Kali Linux](#part-7-update-kali-linux)
+8. [Install Docker Inside Kali](#part-8-install-docker-inside-kali)
+9. [Install & Run OWASP Juice Shop](#part-9-install--run-owasp-juice-shop)
+10. [Managing Juice Shop](#part-10-managing-juice-shop)
+11. [Setting Up Burp Suite & FoxyProxy](#part-11-setting-up-burp-suite--foxyproxy)
+12. [Troubleshooting](#part-12-troubleshooting)
+13. [Quick Reference Cheat Sheet](#quick-reference-cheat-sheet)
 
 ---
 
-## Part 1: Machine Requirements
+## Part 1: What Is a Hypervisor?
 
-A virtual machine (VM) is a computer running inside your computer. Your physical machine needs enough CPU, RAM, and disk space to run both your normal operating system **and** Kali Linux at the same time.
+A **hypervisor** is software that allows you to run multiple operating systems on one physical computer at the same time. Think of it as a "computer inside your computer."
+
+### Simple Analogy
+
+Imagine your computer is an apartment building. The hypervisor is the building manager that divides the building into separate apartments (virtual machines). Each apartment has its own space, utilities, and residents (operating systems), but they all share the same physical building (your computer's hardware).
+
+### Two Types of Hypervisors
+
+**Type 1 — Bare Metal:** Runs directly on the hardware with no host operating system underneath.
+
+- Examples: VMware ESXi, Microsoft Hyper-V Server, Xen
+- Used in: Data centers, enterprise server environments
+
+**Type 2 — Hosted:** Runs on top of an existing operating system like Windows or macOS.
+
+- Examples: VMware Fusion Pro, VMware Workstation Pro, VirtualBox, Parallels
+- Used in: Personal computers, development, testing, and training labs
+- Learn more: <https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion>
+
+### What You Will Be Using
+
+**VMware Fusion Pro** (macOS) or **VMware Workstation Pro** (Windows) is a **Type 2 hypervisor**. It runs on top of your existing operating system (the host OS) and lets you run Kali Linux (the guest OS) inside a virtual machine — without affecting your main system. Anything you do inside the VM stays inside the VM.
+
+---
+
+## Part 2: What Is Kali Linux?
+
+**Kali Linux** is a specialized Linux distribution (operating system) designed specifically for cybersecurity professionals, ethical hackers, and penetration testers. It comes pre-loaded with hundreds of security tools for testing and analyzing computer systems and networks.
+
+### Think of It As
+
+A "Swiss Army knife" for cybersecurity — instead of installing hundreds of security tools individually, Kali gives you everything in one package, ready to use. It is maintained by Offensive Security and is the industry-standard platform for penetration testing and security research.
+
+In this class, Kali Linux will be our workspace. We will run it as a virtual machine inside VMware, and from inside Kali we will launch a vulnerable web application (OWASP Juice Shop) to practice real-world security testing techniques.
+
+---
+
+## Part 3: Machine Requirements
+
+A virtual machine (VM) is a computer running inside your computer (see [Part 1](#part-1-what-is-a-hypervisor) above). Your physical machine needs enough CPU, RAM, and disk space to run both your normal operating system **and** Kali Linux at the same time.
 
 ### Minimum vs Recommended Specs
 
@@ -55,9 +97,9 @@ Virtualization is always enabled on macOS. No action needed.
 
 ---
 
-## Part 2: Download & Install VMware
+## Part 4: Download & Install VMware
 
-For this class, everyone will use VMware as the hypervisor. VMware is **completely free** — no license key is required.
+Now that you understand what a hypervisor is ([Part 1](#part-1-what-is-a-hypervisor)), let's install one. VMware is **completely free** — no license key is required.
 
 - **macOS users** will download **VMware Fusion Pro**
 - **Windows users** will download **VMware Workstation Pro**
@@ -109,9 +151,9 @@ Both are available from the same page.
 
 ---
 
-## Part 3: Download & Import the Kali Linux VM
+## Part 5: Download & Import the Kali Linux VM
 
-Kali Linux provides pre-built VM images so you do not need to install an operating system from scratch.
+Kali Linux ([Part 2](#part-2-what-is-kali-linux)) provides pre-built VM images so you do not need to install an operating system from scratch.
 
 ### Step 1 — Download the Kali VM Image
 
@@ -169,7 +211,7 @@ Click **Apply** or close the settings window.
 1. Click the green **▶ Play** button to start the Kali VM.
 2. Wait for Kali to boot — you will see a login screen.
 3. Enter the default credentials:
-   - **Username:** `xxxxx`
+   - **Username:** `xxxx`
    - **Password:** `xxxx`
 4. Press **Enter** to log in.
 
@@ -181,7 +223,7 @@ Click **Apply** or close the settings window.
 
 ---
 
-## Part 4: Start Kali Linux & Open the Terminal
+## Part 6: Start Kali Linux & Open the Terminal
 
 ### What Is a Terminal?
 
@@ -245,7 +287,7 @@ You should see `kali`. If you do, your terminal is working and you are ready.
 
 ---
 
-## Part 5: Update Kali Linux
+## Part 7: Update Kali Linux
 
 > **Run these commands every time you set up a fresh Kali install.** They make sure your system has the latest security patches and software.
 
@@ -289,7 +331,7 @@ After the reboot, log back in and open the terminal again.
 
 ---
 
-## Part 6: Install Docker Inside Kali
+## Part 8: Install Docker Inside Kali
 
 We will use Docker to run OWASP Juice Shop. Docker is a tool that runs applications inside lightweight containers — think of it as a mini-computer inside your Kali VM.
 
@@ -303,10 +345,10 @@ sudo apt install -y docker.io
 ### Step 2 — Start the Docker service
 
 ```bash
-sudo systemctl enable docker 
+sudo systemctl enable docker --now
 ```
 
-> `enable` makes Docker start automatically every time Kali boots. Add `--now` at the command above. 
+> `enable` makes Docker start automatically every time Kali boots. `--now` starts it immediately.
 
 ### Step 3 — Allow your user to run Docker without sudo (optional but recommended)
 
@@ -340,7 +382,7 @@ If you see **"Hello from Docker!"** in the output, Docker is installed and worki
 
 ---
 
-## Part 7: Install & Run OWASP Juice Shop
+## Part 9: Install & Run OWASP Juice Shop
 
 ### What Is OWASP Juice Shop?
 
@@ -391,7 +433,7 @@ You should see the **OWASP Juice Shop** storefront page. 🎉
 
 ---
 
-## Part 8: Managing Juice Shop
+## Part 10: Managing Juice Shop
 
 These are the commands you will use day-to-day inside your Kali terminal to control Juice Shop.
 
@@ -452,7 +494,159 @@ docker run -d -p 3000:3000 --name juice-shop bkimminich/juice-shop
 
 ---
 
-## Part 9: Troubleshooting
+## Part 11: Setting Up Burp Suite & FoxyProxy
+
+Now that Juice Shop is running, you need the right tools to actually test it. This section explains **what** Burp Suite and FoxyProxy are, **why** you need both, and **how** to set them up inside Kali.
+
+### What Is Burp Suite?
+
+**Burp Suite** is a web application security testing tool made by PortSwigger. Think of it as a security camera for web traffic — it sits between your browser and a website and lets you **see, pause, and modify** every request and response that passes through.
+
+When you type a URL into your browser and press Enter, your browser sends a request to the server and gets a response back. Normally this happens invisibly. Burp Suite makes this traffic visible so you can study it, change it, and look for vulnerabilities.
+
+Burp Suite **comes pre-installed on Kali Linux** — you do not need to download it.
+
+### What Is a Proxy?
+
+A **proxy** is a middleman that sits between your browser and the internet. Instead of your browser talking directly to a website, it sends traffic through the proxy first. The proxy can inspect, log, or modify that traffic before passing it along.
+
+Here is what normal browsing looks like:
+
+```
+Your Browser  ──────────────────►  Website
+```
+
+Here is what happens when Burp Suite is acting as a proxy:
+
+```
+Your Browser  ────►  Burp Suite (proxy)  ────►  Website
+                     You can see and
+                     edit traffic here
+```
+
+### What Is FoxyProxy?
+
+**FoxyProxy** is a small browser extension for Firefox that makes it easy to turn the Burp Suite proxy on and off with a single click.
+
+Without FoxyProxy, you would have to manually open Firefox settings → Network Settings → change the proxy fields → save → and then reverse it all when you want to browse normally again. Every. Single. Time.
+
+FoxyProxy saves you from this by letting you create a **profile** for Burp Suite. When you want to test, you click the FoxyProxy icon and select your Burp profile. When you are done testing, you click it again and turn it off. That is it.
+
+### How They Work Together
+
+Here is the full picture of what your testing setup looks like:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  INSIDE YOUR KALI VM                                        │
+│                                                             │
+│  Firefox ──► FoxyProxy ──► Burp Suite ──► Juice Shop        │
+│  (browser)   (toggle)      (intercept)   (localhost:3000)   │
+│                                                             │
+│  1. You browse Juice Shop in Firefox                        │
+│  2. FoxyProxy routes the traffic through Burp Suite         │
+│  3. Burp Suite captures every request and response          │
+│  4. You can study, modify, and replay the traffic           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### Step 1 — Install FoxyProxy in Firefox
+
+1. Open **Firefox** inside Kali.
+2. Go to: 👉 **<https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>**
+3. Click **Add to Firefox**.
+4. A pop-up will appear asking for permissions — click **Add**.
+5. If asked whether to allow FoxyProxy in Private Windows, click **Allow**.
+6. You will now see a small **fox icon** in the top-right corner of Firefox (near the address bar).
+
+### Step 2 — Configure FoxyProxy to Point to Burp Suite
+
+1. Click the **FoxyProxy fox icon** in the toolbar.
+2. Click **Options**.
+3. Click the **Proxies** tab.
+4. Click **Add**.
+5. Fill in the following:
+
+| Field | Value |
+|-------|-------|
+| **Title** | `Burp Suite` |
+| **Proxy Type** | `HTTP` |
+| **Proxy IP address / Hostname** | `127.0.0.1` |
+| **Port** | `8080` |
+
+6. Click **Save**.
+
+> **What do these values mean?**
+> - `127.0.0.1` is "localhost" — it means "this computer" (your Kali VM). Burp Suite runs locally.
+> - `8080` is the port that Burp Suite listens on by default.
+
+### Step 3 — Launch Burp Suite
+
+1. Open Burp Suite. You can find it in:
+   - **Applications** → **Web Application Analysis** → **Burp Suite**
+   - Or open a terminal and type: `burpsuite`
+2. When prompted, select **Temporary project** → click **Next**.
+3. Select **Use Burp defaults** → click **Start Burp**.
+4. Wait for Burp Suite to fully load (it can take 30–60 seconds).
+
+### Step 4 — Verify the Burp Suite Proxy Listener
+
+1. In Burp Suite, click the **Proxy** tab at the top.
+2. Click the **Proxy settings** (or **Options**) sub-tab.
+3. Under **Proxy Listeners**, confirm there is an entry for:
+   - **Interface:** `127.0.0.1:8080`
+   - **Running:** ✅ (checkbox is checked)
+4. If it is not there, click **Add** and enter `127.0.0.1` for the bind address and `8080` for the port. Check the **Running** box.
+
+### Step 5 — Install the Burp Suite CA Certificate
+
+This step is required so that Burp Suite can intercept **HTTPS** (encrypted) traffic without Firefox showing security errors.
+
+1. In Firefox, make sure FoxyProxy is **turned on** with the Burp Suite profile (click the fox icon → select **Burp Suite**).
+2. With FoxyProxy enabled, go to: 👉 **`http://burpsuite`**
+3. You should see a PortSwigger welcome page. Click **CA Certificate** to download the certificate file (`cacert.der`).
+4. Now go to Firefox settings: click the **☰ menu** → **Settings** → **Privacy & Security**.
+5. Scroll down to the **Certificates** section and click **View Certificates**.
+6. Click the **Authorities** tab.
+7. Click **Import** and select the `cacert.der` file you just downloaded.
+8. A pop-up will appear — check the box for **"Trust this CA to identify websites"** and click **OK**.
+
+> **Why do I need this?** Without this certificate, Firefox will block Burp Suite from reading encrypted traffic and show "Your connection is not secure" errors on every HTTPS page.
+
+### Step 6 — Test the Setup
+
+1. Make sure **Juice Shop is running** (`docker ps` — if not, run `docker start juice-shop`).
+2. Make sure **Burp Suite is open** and the Proxy tab is visible.
+3. In the **Proxy** tab, click **Intercept** and make sure it says **"Intercept is on"**.
+4. Click the **FoxyProxy icon** in Firefox and select your **Burp Suite** profile (it will turn green or show a colored indicator).
+5. In Firefox, go to: **`http://localhost:3000`**
+6. **Firefox will appear to hang** — this is expected! Burp Suite has intercepted the request.
+7. Switch to Burp Suite — you should see the captured HTTP request in the **Intercept** tab.
+8. Click **Forward** to let the request continue to Juice Shop, or click **Drop** to block it.
+
+**If you see the request in Burp Suite — congratulations, your setup is working!** 🎉
+
+### Using the Setup Day-to-Day
+
+**When you want to test Juice Shop with Burp Suite:**
+
+1. Start Juice Shop: `docker start juice-shop`
+2. Open Burp Suite: `burpsuite`
+3. Click the FoxyProxy icon → select **Burp Suite**
+4. Browse Juice Shop at `http://localhost:3000`
+5. Watch requests appear in Burp Suite's Proxy → HTTP history tab
+
+**When you want to browse the internet normally:**
+
+1. Click the FoxyProxy icon → select **Turn Off FoxyProxy (Use Firefox Settings)**
+
+> **Tip:** You do not always need "Intercept is on." If you just want to passively log traffic without pausing every request, turn **Intercept off** in Burp Suite. Traffic will still be recorded in the **HTTP history** tab — you just will not have to click Forward for every single request.
+
+---
+
+## Part 12: Troubleshooting
 
 ### "Cannot connect to the Docker daemon"
 
