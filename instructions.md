@@ -25,7 +25,7 @@ Click the Cloud/Download icon to get your installer.
 
 
 
-Download and install Kali 
+# Download and install Kali 
 
 3. Download Kali Linux Pre-Built Image 
 A pre-built image is an already installed version of Kali that you simply "open" in VMware, rather than installing from an ISO. 
