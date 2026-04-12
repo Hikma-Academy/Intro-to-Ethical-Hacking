@@ -1,4 +1,4 @@
-# 1. Create a Broadcom Account
+# Create a Broadcom Account
 
 To download these products, you must register a basic user account. 
 - Navigate to Portal: Go to the Broadcom Support Portal and click Register in the top-right corner.
@@ -7,7 +7,7 @@ Complete Profile: Fill in your name, country, and a password. You may be asked f
 - Skip "Build My Profile":
 - After clicking Create Account, you may be prompted to "Build My Profile" to unlock enterprise features. You can click "I'm done" or "Later"to proceed with free downloads
 
-# 2. Download VMware Workstation or Fusion 
+# Download VMware Workstation(Windows) or Fusion (MacOS) 
 Login: Return to the Broadcom Support Portal and log in with your new credentials.
 Navigate to Downloads:
 - Click the Software tab (next to Hardware) in the top-left menu.
