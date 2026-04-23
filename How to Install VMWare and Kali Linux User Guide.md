@@ -87,7 +87,7 @@ Once your account is created:
 ---
 
 ## Step 3: Download & Install Kali Linux Pre-Built Image
-
+Note: Install Pre-Built Image ! 
 ### Download Kali Linux
 
 1. **Visit Kali Website:**
